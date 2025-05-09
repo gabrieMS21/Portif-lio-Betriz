@@ -21,7 +21,7 @@ body {
   z-index: 10;
 }
 
-/* ================ Navigation ============== */
+/* ================ nav-mobile ============== */
 .nav-mobile {
   display: flex;
   justify-content: space-between;
@@ -29,7 +29,7 @@ body {
   padding: 12px 16px 8px 16px;
   border-bottom: 3px solid #4caf50;
 }
-
+/* ================ nav ============== */
 .nav-title {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 700;
@@ -54,7 +54,7 @@ body {
   display: block;
 }
 
-/* ============= Profile Section ============ */
+/* ============= perfil Section ============ */
 .sessao-perfil {
   position: relative;
   display: flex;
@@ -106,7 +106,6 @@ body {
 
 .info-perfil {
   width: 100%;
-  max-width: 350px;
   text-align: center;
   margin-top: 24px;
   padding: 0 16px 16px 16px;
@@ -115,9 +114,9 @@ body {
 
 .nome-perfil {
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: #222;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #333333;
   margin-bottom: 4px;
 }
 
@@ -133,7 +132,7 @@ body {
 .desc-perfil {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 1rem;
-  color: #444;
+  color: #555555;
   font-style: italic;
   font-weight: 400;
 }
