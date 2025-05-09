@@ -10,7 +10,32 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   line-height: 1.6;
-  background: #fff;
+  background: #e0e0e0 url("imagens/bg-sections-desktop.png") center center
+    no-repeat fixed;
+  background-size: cover;
+  
+}
+
+.bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("imagens/bg-sections-mobile.png");
+    background-size: 150%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: blur(2px); /* você pode ajustar a intensidade */
+    z-index: -1; /* fica atrás do conteúdo */
+  }
+
+@media (max-width: 900px) {
+  body {
+    background-size: 150%;
+    background-image: url("imagens/bg-sections-mobile.png");
+  }
+
 }
 
 /* ================= Header ================= */
@@ -110,12 +135,13 @@ body.menu-aberto .menu-mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 320px;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
   background: #fff;
   padding-top: 32px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.644);
 }
 
 .bg-sessao {
@@ -171,7 +197,6 @@ body.menu-aberto .menu-mobile {
   margin-bottom: 4px;
 }
 
-
 .desc-perfil {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 1rem;
@@ -184,6 +209,7 @@ body.menu-aberto .menu-mobile {
 
 /* ============= Desktop Styles ============= */
 @media (min-width: 900px) {
+
   .header-mobile {
     border-bottom: #388e3c solid 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -234,7 +260,8 @@ body.menu-aberto .menu-mobile {
     font-weight: 500;
   }
   .sessao-perfil {
-    min-height: 420px;
+    width: 100vw;
+    height: 100vh;
     padding-top: 48px;
     padding-bottom: 48px;
     justify-content: center;
@@ -271,5 +298,93 @@ body.menu-aberto .menu-mobile {
   .desc-perfil {
     font-size: 1.3rem;
     margin-top: 12px;
+  }
+}
+
+/* ========== Section Sobre Mim ========== */
+.sobre-mim-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding: 0;
+}
+
+.sobre-mim-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 10% 0;
+}
+.sobre-mim-foto-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre-mim-foto {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid #4caf50;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.438);
+}
+.sobre-mim-card {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.438);
+  padding: 32px 28px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #4caf50;
+}
+.sobre-mim-titulo {
+  color: #4caf50;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.sobre-mim-texto {
+  color: #333;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+
+@media (min-width: 900px) {
+  .sobre-mim-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    justify-content: center;
+  }
+  .sobre-mim-foto-box {
+    flex: 0 0 260px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .sobre-mim-foto {
+    width: 260px;
+    height: 260px;
+  }
+  .sobre-mim-card {
+    align-items: flex-start;
+    padding: 40px 40px;
+    max-width: 800px;
+  }
+  .sobre-mim-titulo,
+  .sobre-mim-texto {
+    text-align: left;
   }
 }
