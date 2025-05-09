@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@700&display=swap");
-
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -26,12 +24,13 @@ body {
     background-size: 150%;
     background-position: center center;
     background-repeat: no-repeat;
-    filter: blur(2px); /* você pode ajustar a intensidade */
-    z-index: -1; /* fica atrás do conteúdo */
+    filter: blur(2px);
+    z-index: -1; 
   }
 
 @media (max-width: 900px) {
   body {
+    background-position: top;
     background-size: 150%;
     background-image: url("imagens/bg-sections-mobile.png");
   }
