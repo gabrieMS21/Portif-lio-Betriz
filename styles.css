@@ -11,30 +11,20 @@ body {
   background: #e0e0e0 url("imagens/bg-sections-desktop.png") center center
     no-repeat fixed;
   background-size: cover;
-  
 }
 
 .bg-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("imagens/bg-sections-mobile.png");
-    background-size: 150%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    filter: blur(2px);
-    z-index: -1; 
-  }
-
-@media (max-width: 900px) {
-  body {
-    background-position: top;
-    background-size: 150%;
-    background-image: url("imagens/bg-sections-mobile.png");
-  }
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("imagens/bg-sections-mobile.png");
+  background-size: 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  z-index: -1;
 }
 
 /* ================= Header ================= */
@@ -206,100 +196,6 @@ body.menu-aberto .menu-mobile {
 
 /* Estilos mobile-first serão adicionados conforme os designs forem fornecidos */
 
-/* ============= Desktop Styles ============= */
-@media (min-width: 900px) {
-
-  .header-mobile {
-    border-bottom: #388e3c solid 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    padding: 0;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .nav-mobile {
-    max-width: 1200px;
-    width: 100%;
-    border-bottom: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 70px;
-    position: relative;
-  }
-  .nav-title {
-    width: 60%;
-    font-size: 1.5rem;
-  }
-  .menu-btn {
-    display: none;
-  }
-  .menu-mobile {
-    display: flex;
-    justify-content: flex-end;
-    position: static;
-    background: none;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    z-index: auto;
-  }
-  .menu-mobile ul {
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .menu-mobile a {
-    font-size: 1.1rem;
-    color: #4caf50;
-    font-weight: 500;
-  }
-  .sessao-perfil {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    justify-content: center;
-  }
-  .bg-sessao {
-    opacity: 0.18;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .foto-perfil-box {
-    margin-top: 0;
-    margin-bottom: 0;
-    justify-content: center;
-  }
-  .foto-perfil {
-    width: 200px;
-    height: 200px;
-    border-width: 4px;
-  }
-  .info-perfil {
-    margin-top: 32px;
-    max-width: 700px;
-    padding: 0 24px 0 24px;
-  }
-  .nome-perfil {
-    font-size: 2.8rem;
-    margin-bottom: 0;
-    display: inline-block;
-    border-bottom: 6px solid #4caf50;
-    padding-bottom: 2px;
-  }
-
-  .desc-perfil {
-    font-size: 1.3rem;
-    margin-top: 12px;
-  }
-}
-
 /* ========== Section Sobre Mim ========== */
 .sobre-mim-section {
   display: flex;
@@ -360,8 +256,105 @@ body.menu-aberto .menu-mobile {
   line-height: 1.7;
 }
 
+/* ======= MEDIA QUERIES ======= */
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
+  body {
+    background-position: top;
+    background-size: 150%;
+    background-image: url("imagens/bg-sections-mobile.png");
+  }
+}
+
+@media (min-width: 901px) {
+  .header-mobile {
+    border-bottom: #388e3c solid 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-mobile {
+    max-width: 1200px;
+    width: 100%;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 70px;
+    position: relative;
+  }
+  .nav-title {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-mobile {
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: auto;
+  }
+  .menu-mobile ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-mobile a {
+    font-size: 1.1rem;
+    color: #4caf50;
+    font-weight: 500;
+  }
+  .sessao-perfil {
+    width: 100vw;
+    height: 85vh;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    justify-content: center;
+  }
+  .bg-sessao {
+    opacity: 0.18;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .foto-perfil-box {
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-width: 4px;
+  }
+  .info-perfil {
+    margin-top: 32px;
+    max-width: 700px;
+    padding: 0 24px 0 24px;
+  }
+  .nome-perfil {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+    display: inline-block;
+    border-bottom: 6px solid #4caf50;
+    padding-bottom: 2px;
+  }
+  .desc-perfil {
+    font-size: 1.3rem;
+    margin-top: 12px;
+  }
   .sobre-mim-container {
     flex-direction: row;
     align-items: center;
