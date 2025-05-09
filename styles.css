@@ -155,7 +155,7 @@ body.menu-aberto .menu-mobile {
 }
 
 .info-perfil {
-  width: 100%;
+  max-width: 350px;
   text-align: center;
   margin-top: 24px;
   padding: 0 16px 16px 16px;
@@ -165,19 +165,12 @@ body.menu-aberto .menu-mobile {
 .nome-perfil {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bolder;
+  border-bottom: 4px solid #4caf50;
   font-size: 1.5rem;
   color: #333333;
   margin-bottom: 4px;
 }
 
-.linha-perfil {
-  width: 90%;
-  height: 6px;
-  background: #4caf50;
-  margin: 12px auto 16px auto;
-  border: none;
-  border-radius: 3px;
-}
 
 .desc-perfil {
   font-family: "Montserrat", Arial, sans-serif;
@@ -274,9 +267,7 @@ body.menu-aberto .menu-mobile {
     border-bottom: 6px solid #4caf50;
     padding-bottom: 2px;
   }
-  .linha-perfil {
-    display: none;
-  }
+
   .desc-perfil {
     font-size: 1.3rem;
     margin-top: 12px;
