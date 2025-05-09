@@ -38,7 +38,7 @@ body {
   top: 56px; /* altura do header */
   right: 0;
   width: 100%;
-  background: #fff;
+  background: #ffffffd8;
   border-bottom: 3px solid #4caf50;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   z-index: 100;
@@ -46,14 +46,20 @@ body {
 }
 .menu-mobile ul {
   list-style: none;
-  padding: 24px 0;
+  padding: 10px 0px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 16px ;
   align-items: flex-end;
-  padding-right: 32px;
+  padding-right: 5%;
 }
+.menu-mobile li{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .menu-mobile a {
   color: #4caf50;
   font-family: "Montserrat", Arial, sans-serif;
@@ -65,6 +71,10 @@ body {
 .menu-mobile a:hover {
   color: #388e3c;
 }
+.menu-mobile li:hover{
+border-bottom: #4caf50 solid 2px;  
+}
+
 body.menu-aberto .menu-mobile {
   display: block;
 }
@@ -86,6 +96,7 @@ body.menu-aberto .menu-mobile {
   cursor: pointer;
   padding: 8px;
 }
+
 .menu-bar {
   width: 28px;
   height: 3px;
